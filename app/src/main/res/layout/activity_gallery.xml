@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Top action row (no back button: the action bar already has Up) -->
+        <!-- Top action row: Refresh, Select, Deselect, Delete, Download -->
         <LinearLayout
             android:id="@+id/topBar"
             android:orientation="horizontal"
@@ -16,6 +16,10 @@
             android:layout_height="wrap_content"
             android:padding="4dp">
 
+            <ImageButton android:id="@+id/btnRefresh"
+                android:src="@drawable/ic_refresh"
+                android:contentDescription="@string/act_refresh"
+                style="@style/GalleryActionButton" />
             <ImageButton android:id="@+id/btnSelectAll"
                 android:src="@drawable/ic_check_box"
                 android:contentDescription="@string/act_select_all"
@@ -34,7 +38,6 @@
                 style="@style/GalleryActionButton" />
         </LinearLayout>
 
-        <!-- Thumbnail grid -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/grid"
             android:layout_width="match_parent"
@@ -44,7 +47,6 @@
             android:padding="@dimen/grid_outer_border"
             android:clipToPadding="false" />
 
-        <!-- Bottom navigation + labels row -->
         <LinearLayout
             android:id="@+id/bottomBar"
             android:orientation="horizontal"
@@ -82,7 +84,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Loading overlay -->
     <LinearLayout
         android:id="@+id/loadingOverlay"
         android:orientation="vertical"

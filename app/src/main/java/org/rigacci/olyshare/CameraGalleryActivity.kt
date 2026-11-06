@@ -39,6 +39,7 @@ class CameraGalleryActivity : AppCompatActivity() {
     private lateinit var glm: GridLayoutManager
     private lateinit var adapter: ThumbAdapter
 
+    private lateinit var btnRefresh: ImageButton
     private lateinit var btnSelectAll: ImageButton
     private lateinit var btnDeselect: ImageButton
     private lateinit var btnDelete: ImageButton
@@ -79,6 +80,7 @@ class CameraGalleryActivity : AppCompatActivity() {
 
     private fun bindViews() {
         grid = findViewById(R.id.grid)
+        btnRefresh = findViewById(R.id.btnRefresh)
         btnSelectAll = findViewById(R.id.btnSelectAll)
         btnDeselect = findViewById(R.id.btnDeselect)
         btnDelete = findViewById(R.id.btnDelete)
@@ -101,7 +103,7 @@ class CameraGalleryActivity : AppCompatActivity() {
                 else -> R.dimen.icon_size_medium
             }
         )
-        listOf(btnSelectAll, btnDeselect, btnDelete, btnDownload,
+        listOf(btnRefresh, btnSelectAll, btnDeselect, btnDelete, btnDownload,
                btnFirst, btnPrev, btnNext, btnLast).forEach {
             val lp = it.layoutParams; lp.height = h; it.layoutParams = lp
         }
@@ -154,7 +156,10 @@ class CameraGalleryActivity : AppCompatActivity() {
     }
 
     private fun wireButtons() {
-        // A single tap on either button opens its menu of actions.
+        // Refresh: re-query the camera (get_imglist + get_rsvimglist) and retry any
+        // thumbnails that are still missing (failures are never cached).
+        btnRefresh.setOnClickListener { startLoad() }
+
         btnSelectAll.setOnClickListener { showSelectMenu(it) }
         btnDeselect.setOnClickListener { showDeselectMenu(it) }
 
