@@ -40,9 +40,10 @@ android {
     applicationVariants.all {
         val variant = this
         outputs.all {
-            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl)
-                .outputFileName =
-                "oly-imageshare-$vMajor.$vMinor-build$vCode-${variant.buildType.name}.apk"
+            val outputImpl = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            val abi = outputImpl.getFilter(com.android.build.OutputFile.ABI) ?: "universal"
+            outputImpl.outputFileName =
+                "oly-imageshare-$vMajor.$vMinor-build$vCode-$abi-${variant.buildType.name}.apk"
         }
     }
 }
