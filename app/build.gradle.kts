@@ -1,11 +1,10 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-
-import java.util.Properties
 
 val versionPropsFile = file("version.properties")
 val versionProps = Properties().apply {
@@ -42,7 +41,7 @@ android {
 tasks.register("bumpMajor") {
     description = "Increment the major version, reset minor to 0, bump the build code"
     doLast {
-        val p = java.util.Properties()
+        val p = Properties()
         versionPropsFile.inputStream().use { p.load(it) }
         val major = (p.getProperty("major") ?: "0").toInt() + 1
         val code  = (p.getProperty("code")  ?: "1").toInt() + 1
@@ -73,7 +72,7 @@ tasks.register("bumpVersion") {
 tasks.register("bumpBuild") {
     description = "Increment only the build code (versionName unchanged)"
     doLast {
-        val p = java.util.Properties()
+        val p = Properties()
         versionPropsFile.inputStream().use { p.load(it) }
         val code = (p.getProperty("code") ?: "1").toInt() + 1
         p.setProperty("code", code.toString())
