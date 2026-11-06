@@ -1,0 +1,24 @@
+# --- Gradle & build output ---
+.gradle/
+build/
+
+# --- Local, machine-specific config ---
+local.properties
+
+# --- Signing secrets: NEVER commit these ---
+*.jks
+*.keystore
+keystore.properties
+
+# --- IDE / editor (not used here) ---
+*.iml
+.idea/
+.vscode/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Misc ---
+*.log
+captures/
