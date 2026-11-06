@@ -1,0 +1,16 @@
+<resources>
+    <!-- Action-button icon sizes, mapped from Settings "Buttons size". -->
+    <dimen name="icon_size_small">32dp</dimen>
+    <dimen name="icon_size_medium">40dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_touch_min">48dp</dimen>
+
+    <!-- Label text sizes, mapped from Settings "Labels size". -->
+    <dimen name="label_size_small">12sp</dimen>
+    <dimen name="label_size_medium">14sp</dimen>
+    <dimen name="label_size_large">16sp</dimen>
+
+    <!-- Grid geometry (density-independent). -->
+    <dimen name="grid_outer_border">8dp</dimen>
+    <dimen name="thumb_padding">3dp</dimen>
+</resources>

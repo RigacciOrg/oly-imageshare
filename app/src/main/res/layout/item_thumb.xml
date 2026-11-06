@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null" />
+
+    <!-- green status flags, bottom-left, left-to-right -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:id="@+id/flagProtected"
+            android:src="@drawable/ic_ov_protected_vertical"
+            android:visibility="gone"
+            style="@style/ThumbFlag" />
+        <ImageView android:id="@+id/flagShare"
+            android:src="@drawable/ic_ov_share"
+            android:visibility="gone"
+            style="@style/ThumbFlag" />
+        <ImageView android:id="@+id/flagVideo"
+            android:src="@drawable/ic_ov_video"
+            android:visibility="gone"
+            style="@style/ThumbFlag" />
+        <ImageView android:id="@+id/flagRaw"
+            android:src="@drawable/ic_ov_raw"
+            android:visibility="gone"
+            style="@style/ThumbFlag" />
+    </LinearLayout>
+
+    <!-- yellow selection tick, top-right -->
+    <ImageView android:id="@+id/flagSelected"
+        android:src="@drawable/ic_ov_selected"
+        android:layout_gravity="top|end"
+        android:layout_margin="2dp"
+        android:visibility="gone"
+        style="@style/ThumbFlag" />
+</FrameLayout>

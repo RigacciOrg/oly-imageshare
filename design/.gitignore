@@ -1,0 +1,3 @@
+# Throwaway intermediate exports: keep the folder, ignore its contents.
+/icon/exports/*
+!/icon/exports/.gitkeep

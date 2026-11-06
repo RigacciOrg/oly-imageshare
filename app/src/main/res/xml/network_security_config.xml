@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The camera speaks plain HTTP on a private Wi-Fi hotspot, and its IP is
+     user-configurable (Settings > Camera IP address), so cleartext is allowed
+     app-wide. The app only ever connects to that camera address. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

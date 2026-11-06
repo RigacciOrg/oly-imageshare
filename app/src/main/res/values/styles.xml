@@ -1,0 +1,29 @@
+<resources>
+    <!-- Top action buttons: equal share of one row; height set in code from
+         Settings "Buttons size". -->
+    <style name="GalleryActionButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:tint">#333333</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!-- Bottom navigation buttons. -->
+    <style name="GalleryNavButton" parent="GalleryActionButton">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Overlay flags; size set in code relative to the thumbnail. -->
+    <style name="ThumbFlag">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_marginEnd">2dp</item>
+    </style>
+    <!-- AppCompat theme for the gallery (AppCompatActivity requires it). -->
+    <style name="Theme.OlyShare.Gallery" parent="Theme.AppCompat.Light.DarkActionBar" />
+
+</resources>

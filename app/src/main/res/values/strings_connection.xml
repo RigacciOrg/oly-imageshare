@@ -1,0 +1,19 @@
+<resources>
+    <string name="conn_checking">Checking camera connection…</string>
+    <string name="conn_ok">Camera connection is working (%1$s)</string>
+    <string name="conn_model_label">Model</string>
+    <string name="conn_serial_one">Serial number: %1$s</string>
+    <string name="conn_serial_many">Serial numbers: %1$s</string>
+    <string name="conn_fail">Connection failed: %1$s</string>
+    <string name="conn_retry">Retry</string>
+    <string name="conn_instructions">On the camera, open the Playback menu and choose \"Connection to Smartphone\". Then connect this phone to the camera\'s Wi-Fi hotspot and try again.</string>
+
+    <string name="conn_err_timeout">connection timed out</string>
+    <string name="conn_err_net_unreach">network unreachable</string>
+    <string name="conn_err_host_unreach">camera not reachable</string>
+    <string name="conn_err_refused">connection refused</string>
+    <string name="conn_err_host">camera address not found</string>
+    <string name="conn_err_cleartext">HTTP blocked — check the Camera IP address in Settings</string>
+    <string name="conn_err_http">unexpected response from camera (%1$s)</string>
+    <string name="conn_err_generic">network error</string>
+</resources>

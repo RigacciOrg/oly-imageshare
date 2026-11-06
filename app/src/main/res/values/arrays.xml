@@ -1,0 +1,24 @@
+<resources>
+    <string-array name="download_mode_entries">
+        <item>Shared storage (DCIM/OlyShare)</item>
+        <item>Custom folder (SAF)</item>
+    </string-array>
+    <string-array name="download_mode_values">
+        <item>mediastore</item>
+        <item>saf</item>
+    </string-array>
+
+    <string-array name="thumb_size_entries">
+        <item>Large</item><item>Medium</item><item>Small</item><item>Tiny</item>
+    </string-array>
+    <string-array name="thumb_size_values">
+        <item>large</item><item>medium</item><item>small</item><item>tiny</item>
+    </string-array>
+
+    <string-array name="size3_entries">
+        <item>Large</item><item>Medium</item><item>Small</item>
+    </string-array>
+    <string-array name="size3_values">
+        <item>large</item><item>medium</item><item>small</item>
+    </string-array>
+</resources>

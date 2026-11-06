@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top action row (no back button: the action bar already has Up) -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <ImageButton android:id="@+id/btnSelectAll"
+                android:src="@drawable/ic_check_box"
+                android:contentDescription="@string/act_select_all"
+                style="@style/GalleryActionButton" />
+            <ImageButton android:id="@+id/btnDeselect"
+                android:src="@drawable/ic_check_box_outline_blank"
+                android:contentDescription="@string/act_deselect"
+                style="@style/GalleryActionButton" />
+            <ImageButton android:id="@+id/btnDelete"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="@string/act_delete"
+                style="@style/GalleryActionButton" />
+            <ImageButton android:id="@+id/btnDownload"
+                android:src="@drawable/ic_download"
+                android:contentDescription="@string/act_download"
+                style="@style/GalleryActionButton" />
+        </LinearLayout>
+
+        <!-- Thumbnail grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:padding="@dimen/grid_outer_border"
+            android:clipToPadding="false" />
+
+        <!-- Bottom navigation + labels row -->
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <ImageButton android:id="@+id/btnFirst"
+                android:src="@drawable/ic_first_page"
+                style="@style/GalleryNavButton" />
+            <ImageButton android:id="@+id/btnPrev"
+                android:src="@drawable/ic_chevron_left"
+                style="@style/GalleryNavButton" />
+
+            <TextView android:id="@+id/lblPage"
+                android:text="p.1/1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4" />
+            <TextView android:id="@+id/lblSel"
+                android:text="sel.0/0"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4" />
+
+            <ImageButton android:id="@+id/btnNext"
+                android:src="@drawable/ic_chevron_right"
+                style="@style/GalleryNavButton" />
+            <ImageButton android:id="@+id/btnLast"
+                android:src="@drawable/ic_last_page"
+                style="@style/GalleryNavButton" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Loading overlay -->
+    <LinearLayout
+        android:id="@+id/loadingOverlay"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/loadingText"
+            android:text="@string/loading_query"
+            android:textColor="#FFFFFF"
+            android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

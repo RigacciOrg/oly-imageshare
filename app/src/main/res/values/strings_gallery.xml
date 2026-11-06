@@ -1,0 +1,30 @@
+<resources>
+    <string name="act_back">Back to menu</string>
+    <string name="act_select_all">Select images</string>
+    <string name="act_deselect">Deselect images</string>
+    <string name="act_delete">Delete selected</string>
+    <string name="act_download">Download selected</string>
+
+    <string name="sel_mode_page">Select images on this page</string>
+    <string name="sel_mode_all">Select all images in gallery</string>
+    <string name="sel_mode_protected">Select protected images</string>
+    <string name="sel_mode_shared">Select shared images</string>
+
+    <string name="desel_mode_page">Deselect images on this page</string>
+    <string name="desel_mode_all">Deselect all images in gallery</string>
+
+    <string name="loading_query">Querying camera…</string>
+    <string name="loading_list">Listing images…</string>
+    <string name="loading_thumbs">Downloading thumbnails %1$d/%2$d</string>
+
+    <string name="dl_confirm">Ready to download %1$d files</string>
+    <string name="del_confirm">Ready to delete %1$d files</string>
+    <string name="dl_progress">Download %1$d/%2$d</string>
+    <string name="del_progress">Deleting %1$d/%2$d</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_abort">Abort</string>
+    <string name="dl_skipped_warning">WARNING: %1$d files were not downloaded because they already exist in the destination folder.</string>
+    <string name="no_selection">No images selected.</string>
+    <string name="delete_unsupported">This camera does not support deletion.</string>
+</resources>

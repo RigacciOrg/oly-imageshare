@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="General">
+        <ListPreference
+            app:key="download_mode"
+            app:title="Download location"
+            app:entries="@array/download_mode_entries"
+            app:entryValues="@array/download_mode_values"
+            app:defaultValue="mediastore"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+            app:key="download_folder"
+            app:title="Download folder"
+            app:summary="Not set" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Gallery Style">
+        <ListPreference
+            app:key="thumb_size"
+            app:title="Thumbnails size"
+            app:entries="@array/thumb_size_entries"
+            app:entryValues="@array/thumb_size_values"
+            app:defaultValue="medium"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:key="button_size"
+            app:title="Buttons size"
+            app:entries="@array/size3_entries"
+            app:entryValues="@array/size3_values"
+            app:defaultValue="medium"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:key="label_size"
+            app:title="Labels size"
+            app:entries="@array/size3_entries"
+            app:entryValues="@array/size3_values"
+            app:defaultValue="medium"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Thumbnails Cache">
+        <EditTextPreference
+            app:key="cache_max_days"
+            app:title="Max days"
+            app:defaultValue="180"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Camera Communication">
+        <EditTextPreference
+            app:key="camera_ip"
+            app:title="Camera IP address"
+            app:defaultValue="192.168.0.10"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="camera_dcim"
+            app:title="Camera DCIM folder"
+            app:defaultValue="DCIM"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

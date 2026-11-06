@@ -1,0 +1,7 @@
+<resources>
+    <!-- AppCompat theme required by PreferenceFragmentCompat.
+         Applied only to SettingsActivity (see the manifest). -->
+    <style name="Theme.OlyShare.Settings" parent="Theme.AppCompat.DayNight">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+</resources>
