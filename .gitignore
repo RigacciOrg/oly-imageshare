@@ -1,24 +1,41 @@
-# --- Gradle & build output ---
+# Gradle files
 .gradle/
 build/
+.kotlin/
 
-# --- Local, machine-specific config ---
+# Local configuration file (sdk path, etc)
 local.properties
 
-# --- Signing secrets: NEVER commit these ---
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
 *.jks
 *.keystore
 keystore.properties
 
-# --- IDE / editor (not used here) ---
-*.iml
-.idea/
-.vscode/
+# Google Services (e.g. APIs or Firebase)
+google-services.json
 
-# --- OS cruft ---
+# Android Profiling
+*.hprof
+
+# Ignore files from user's environment
+.vscode/
 .DS_Store
 Thumbs.db
-
-# --- Misc ---
-*.log
-captures/
