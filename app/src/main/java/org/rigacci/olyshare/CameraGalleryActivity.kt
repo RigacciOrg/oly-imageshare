@@ -72,6 +72,9 @@ class CameraGalleryActivity : AppCompatActivity() {
         setupGrid()
         wireButtons()
 
+        // Delete stays disabled/greyed until a successful load confirms support.
+        setDeleteAvailable(false)
+
         savedInstanceState?.getStringArrayList("selected")?.let { selected.addAll(it) }
         currentPage = savedInstanceState?.getInt("page", 0) ?: 0
 
@@ -93,6 +96,12 @@ class CameraGalleryActivity : AppCompatActivity() {
         lblSel = findViewById(R.id.lblSel)
         loadingOverlay = findViewById(R.id.loadingOverlay)
         loadingText = findViewById(R.id.loadingText)
+    }
+
+    /** Enable/disable the Delete button and grey its icon accordingly. */
+    private fun setDeleteAvailable(available: Boolean) {
+        btnDelete.isEnabled = available
+        btnDelete.alpha = if (available) 1f else 0.3f
     }
 
     private fun applyButtonSizes() {
@@ -156,8 +165,6 @@ class CameraGalleryActivity : AppCompatActivity() {
     }
 
     private fun wireButtons() {
-        // Refresh: re-query the camera (get_imglist + get_rsvimglist) and retry any
-        // thumbnails that are still missing (failures are never cached).
         btnRefresh.setOnClickListener { startLoad() }
 
         btnSelectAll.setOnClickListener { showSelectMenu(it) }
@@ -193,6 +200,7 @@ class CameraGalleryActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 ui.post {
                     loadingOverlay.visibility = View.GONE
+                    setDeleteAvailable(false)   // couldn't confirm support -> keep it greyed
                     toast("Error: ${e.message}")
                 }
             }
@@ -204,8 +212,7 @@ class CameraGalleryActivity : AppCompatActivity() {
         val existing = c.images.map { it.path }.toHashSet()
         selected.retainAll(existing)
 
-        btnDelete.isEnabled = c.deleteSupported
-        btnDelete.alpha = if (c.deleteSupported) 1f else 0.3f
+        setDeleteAvailable(c.deleteSupported)
 
         adapter = ThumbAdapter(this, c.sharedPaths, selected) { toggle(it) }
         grid.adapter = adapter
