@@ -5,13 +5,13 @@
     <string name="act_delete">Delete selected</string>
     <string name="act_download">Download selected</string>
 
-    <string name="sel_mode_page">Select images on this page</string>
-    <string name="sel_mode_all">Select all images in gallery</string>
+    <string name="sel_mode_page">Select all on this page</string>
+    <string name="sel_mode_all">Select all in the gallery</string>
     <string name="sel_mode_protected">Select protected images</string>
     <string name="sel_mode_shared">Select shared images</string>
 
-    <string name="desel_mode_page">Deselect images on this page</string>
-    <string name="desel_mode_all">Deselect all images in gallery</string>
+    <string name="desel_mode_page">Deselect all on this page</string>
+    <string name="desel_mode_all">Deselect all in the gallery</string>
 
     <string name="loading_query">Querying camera…</string>
     <string name="loading_list">Listing images…</string>

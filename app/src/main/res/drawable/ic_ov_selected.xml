@@ -1,8 +1,17 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp" android:height="24dp"
     android:viewportWidth="24" android:viewportHeight="24">
-    <path android:pathData="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" android:fillColor="#FF000000"
-        android:strokeColor="#FF000000" android:strokeWidth="2.6"
-        android:strokeLineJoin="round" android:strokeLineCap="round"/>
-    <path android:pathData="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" android:fillColor="#FFFFEB00"/>
+    <!-- Yellow disc with a black ring (halo), visible over any thumbnail. -->
+    <path
+        android:pathData="M2.5,12 a9.5,9.5 0 1,0 19,0 a9.5,9.5 0 1,0 -19,0 Z"
+        android:fillColor="#FFFFEB00"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.6" />
+    <!-- Black checkmark inside the disc. -->
+    <path
+        android:pathData="M8.1,12.52 L10.96,15.12 L15.9,9.4"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
 </vector>

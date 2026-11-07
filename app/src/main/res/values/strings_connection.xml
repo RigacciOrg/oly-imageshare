@@ -6,7 +6,7 @@
     <string name="conn_serial_many">Serial numbers: %1$s</string>
     <string name="conn_fail">Connection failed: %1$s</string>
     <string name="conn_retry">Retry</string>
-    <string name="conn_instructions">On the camera, open the Playback menu and choose \"Connection to Smartphone\". Then connect this phone to the camera\'s Wi-Fi hotspot and try again.</string>
+    <string name="conn_instructions">On the camera, open the Playback Menu and choose \"Device Connection\". Then connect this phone to the camera\'s Wi-Fi hotspot and try again.</string>
 
     <string name="conn_err_timeout">connection timed out</string>
     <string name="conn_err_net_unreach">network unreachable</string>
