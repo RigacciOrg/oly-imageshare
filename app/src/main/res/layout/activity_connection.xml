@@ -48,10 +48,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <Button android:id="@+id/retryButton"
-            android:text="@string/conn_retry"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_marginTop="24dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <Button android:id="@+id/retryButton"
+                android:text="@string/conn_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button android:id="@+id/wifiButton"
+                android:text="@string/conn_wifi_settings"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

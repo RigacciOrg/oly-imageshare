@@ -1,10 +1,13 @@
 package org.rigacci.olyshare
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.provider.Settings
 import android.util.Xml
 import android.view.MenuItem
 import android.view.View
@@ -23,7 +26,8 @@ import java.util.concurrent.Executors
 /**
  * Runs get_caminfo.cgi and reports whether the camera is reachable.
  * On success it highlights the model and any serial numbers; on failure it
- * classifies the error and tells the user how to connect.
+ * classifies the error and tells the user how to connect. A "Wi-Fi Settings"
+ * button jumps to the system Wi-Fi screen so the user can join the camera hotspot.
  */
 class ConnectionActivity : Activity() {
 
@@ -33,6 +37,7 @@ class ConnectionActivity : Activity() {
     private lateinit var serialText: TextView
     private lateinit var detailsText: TextView
     private lateinit var retryButton: Button
+    private lateinit var wifiButton: Button
 
     private val ui = Handler(Looper.getMainLooper())
     private val bg = Executors.newSingleThreadExecutor()
@@ -52,14 +57,34 @@ class ConnectionActivity : Activity() {
         serialText = findViewById(R.id.serialText)
         detailsText = findViewById(R.id.detailsText)
         retryButton = findViewById(R.id.retryButton)
+        wifiButton = findViewById(R.id.wifiButton)
 
         retryButton.setOnClickListener { check() }
+        wifiButton.setOnClickListener { openWifiSettings() }
         check()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) { finish(); return true }
         return super.onOptionsItemSelected(item)
+    }
+
+    /**
+     * Open the system Wi-Fi screen. Android 10+ shows a lightweight slide-up
+     * Wi-Fi panel; older versions open the full Wi-Fi settings. Falls back
+     * gracefully if a device lacks either activity.
+     */
+    private fun openWifiSettings() {
+        val primary = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            Intent(Settings.Panel.ACTION_WIFI)
+        else
+            Intent(Settings.ACTION_WIFI_SETTINGS)
+        try {
+            startActivity(primary)
+        } catch (e: Exception) {
+            try { startActivity(Intent(Settings.ACTION_WIFI_SETTINGS)) }
+            catch (e2: Exception) { startActivity(Intent(Settings.ACTION_SETTINGS)) }
+        }
     }
 
     private fun check() {
