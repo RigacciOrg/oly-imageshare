@@ -98,9 +98,8 @@ kotlin {
 }
 
 dependencies {
-    // Intentionally empty: this skeleton uses only the Android platform
-    // and the Kotlin standard library. No third-party dependencies,
-    // no native (.so) libraries -> automatically 16 KB page-size compliant.
+    // Uses Android platform APIs, Kotlin standard library
+    // and AndroidX libraries. No native (.so) libraries.
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.documentfile:documentfile:1.0.1")
