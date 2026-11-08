@@ -1,0 +1,31 @@
+Oly ImageShare imports photos from Olympus cameras over Wi-Fi.
+
+The app connects to the camera's Wi-Fi access point and uses its HTTP
+API to list images, display thumbnails, download full-resolution files
+and (on supported cameras) delete them.
+
+Features:
+
+* Camera gallery — An adaptive thumbnail grid displaying all photos
+  and videos on the memory card, newest first. Icons identify protected
+  images (key), share-reserved images, videos and RAW (.ORF) files.
+  Tap individual thumbnails to select or deselect images, or use bulk
+  selection by page, for the entire gallery, or by protection or
+  sharing status. Selected images can be downloaded or deleted.
+  Progress is displayed and operations can be cancelled.
+
+* Camera connection check — Verifies that the camera is reachable and
+  displays its model and serial number, or a helpful error message if
+  the connection fails.
+
+* Settings — Configure the download destination (shared storage or a
+  folder of your choice), thumbnail, button and label sizes, thumbnail
+  cache retention, camera IP address and DCIM folder.
+
+* About and Quit — View application information and exit the app.
+  Quitting also cleans up the old thumbnail cache.
+
+Free and Open Source Software (FOSS)
+
+Oly ImageShare is free and open source software, released under the
+GNU General Public License v3.0 or later (GPL-3.0-or-later).

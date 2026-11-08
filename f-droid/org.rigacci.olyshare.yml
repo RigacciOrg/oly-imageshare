@@ -1,0 +1,21 @@
+Categories:
+  - Multimedia
+
+License: GPL-3.0-or-later
+
+AuthorName: Niccolo Rigacci
+AuthorEmail: niccolo@rigacci.org
+AuthorWebSite: https://www.rigacci.org/
+SourceCode: https://github.com/RigacciOrg/oly-imageshare
+IssueTracker: https://github.com/RigacciOrg/oly-imageshare/issues
+
+RepoType: git
+Repo: https://github.com/RigacciOrg/oly-imageshare.git
+
+Builds:
+  - versionName: '0.5'
+    versionCode: 7
+    commit: v0.5.7
+    subdir: app
+    gradle:
+      - yes

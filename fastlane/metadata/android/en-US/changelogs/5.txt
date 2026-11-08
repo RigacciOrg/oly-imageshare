@@ -1,0 +1,5 @@
+0.4-build5 - First Public release
+
+* 100% free and open source software (GPL-3.0-or-later).
+* No advertising, no user tracking, maximum privacy.
+* Android app 100% Kotlin/Java, universal architecture.

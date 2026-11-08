@@ -1,0 +1,4 @@
+0.5-build7 - Minor improvements
+
+* More visible select badge, fixed some labels.
+* Added Wi-Fi settings button in check connectivity page.
