@@ -42,6 +42,14 @@ From the main menu:
   IP address and DCIM folder.
 - **About** and **Quit** (which also prunes the old thumbnail cache).
 
+## Screenshots
+
+<p align="center">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/010_camera-gallery.png" alt="Camera gallery" width="240">
+  <br>
+  <em>The camera gallery — thumbnails with multi-select, paging and status flags.</em>
+</p>
+
 ## Requirements
 
 - An Olympus / OM System camera with the Wi-Fi "Connection to Smartphone" feature.
