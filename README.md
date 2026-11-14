@@ -1,7 +1,9 @@
 # Oly ImageShare
 
-Download photos from Olympus / OM System cameras over their built-in Wi-Fi,
-straight to your Android phone.
+**Oly ImageShare** is a lightweight, **open-source Android app** for
+downloading photos from Olympus / OM System cameras over their built-in Wi-Fi.
+Built as a **native Android app** in Kotlin (no cross-platform framework), it
+stays under **4 MB** and launches quickly.
 
 ## Why this app
 
@@ -15,9 +17,9 @@ everything about it:
 - **Maximum privacy.** Your photos go from the camera to your phone and nowhere
   else. Nothing is uploaded to any cloud, and the app asks for no account.
 - **Lightweight.** It is written against the plain Android platform with a handful
-  of small, well-known AndroidX libraries and **no native code of its own**, so the
-  package is small, starts quickly, and is automatically compatible with 16 KB
-  memory page devices (a current Google Play requirement).
+  of small, well-known AndroidX libraries and **no C/C++ (NDK) libraries**, so the
+  package is small (under 4 MB), starts quickly, and is automatically compatible
+  with 16 KB memory page devices (a current Google Play requirement).
 - **Open and inspectable.** The whole source is available; you can read exactly
   what it does and build it yourself.
 
